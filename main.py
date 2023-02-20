@@ -43,10 +43,12 @@ class Auto:
         return cantidad
     
     def verificarIntegridad(self):
-        if (self.motor.self.registro==self.registro):
+        if (self.motor.registro==self.registro):
             for i in range(len(self.asientos)):
-                if (self.asientos.self.registro[i]!=self.registro):
-                    veracidad=False
+                objeto=self.asientos[i]
+                if isinstance(self.asientos[i],Asiento):
+                    if (objeto.registro!=self.registro):
+                        veracidad=False
         else:
             veracidad=False
         if veracidad==False:
