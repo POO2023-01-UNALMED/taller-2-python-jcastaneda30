@@ -25,7 +25,7 @@ class Motor:
 
 class Auto:
     cantidadCreados=0
-    veracidad=True
+    
     def __init__(self,modelo,precio,asientos,marca,motor,registro):
         self.modelo=modelo
         self.precio=precio
@@ -43,6 +43,7 @@ class Auto:
         return cantidad
     
     def verificarIntegridad(self):
+        veracidad=True
         if (self.motor.registro==self.registro):
             for i in range(len(self.asientos)):
                 objeto=self.asientos[i]
