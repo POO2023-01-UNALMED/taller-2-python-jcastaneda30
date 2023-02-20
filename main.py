@@ -24,7 +24,6 @@ class Motor:
             self.tipo=tipo
 
 class Auto:
-    cantidad=0
     cantidadCreados=0
     veracidad=True
     def __init__(self,modelo,precio,asientos,marca,motor,registro):
@@ -37,6 +36,7 @@ class Auto:
 
     
     def cantidadAsientos(self):
+        cantidad=0
         for i in range(len(self.asientos)):
             if isinstance(self.asientos[i],Asiento):
                 cantidad+=1
@@ -50,7 +50,7 @@ class Auto:
         else:
             veracidad=False
         if veracidad==False:
-            print("Las piezas no son originales")
+            return "Las piezas no son originales"
         else:
-            print("Auto original")
+            return "Auto original"
 
