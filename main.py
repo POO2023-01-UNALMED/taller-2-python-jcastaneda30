@@ -45,7 +45,7 @@ class Auto:
     def verificarIntegridad(self):
         if (self.motor.registro==self.registro):
             for i in range(len(self.asientos)):
-                if (isinstance(self.asientos[i],Asiento)==False):
+                if (self.asientos.registro[i]!=self.registro):
                     veracidad=False
         else:
             veracidad=False
